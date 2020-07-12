@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h4 id="day">@abdirahmangaras's day</h4>
+    <div class="box" id="heading"> <h1>  <%= kindOfDay %> </h1> </div>
+
+    
+
+    <div class="box">
+
+            <% for(var i=0; i<newListItems.length; i++){ %>
+
+                <div class="item">
+                    <input type="checkbox">
+                <p> <%= newListItems[i] %></p>
+            </div>
+           <%  } %>
+           <form action="/" method="POST" class="item">
+            <input type="text" name="newItem" placeholder="New Items" autocomplete="off">
+            <button type="submit" name="button">+ </button>
+    </form>
+       
+    </div>
+
+
+
+</body>
+</html>
